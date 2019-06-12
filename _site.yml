@@ -1,7 +1,7 @@
 name: "Final Project Blog"
-title: "My Blog"
+title: "R Tutorials Final Project"
 description: |
-  My Blog
+  R tutorials
 output_dir: "docs"
 navbar:
   left:
@@ -15,8 +15,8 @@ navbar:
           href: "map_data_frame.html"
         - text: "Parallel Iteration map2, pmap"
           href: "parallel_iteration_map2_pmap.html"
-        - text: "Functions"
-          href: "functions.html"
+        - text: "Creating Functions"
+          href: "Creating_Functions.html"
         - text: "Final Summary"
           href: "final_summary.html"  
   right:
@@ -26,3 +26,4 @@ navbar:
       href: about.html
     - icon: fa fa-github
       href: https://github.com/aklest/Final_Project_Blog.git
+      

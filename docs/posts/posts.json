@@ -37,7 +37,7 @@
     "date": "2019-06-11",
     "categories": [],
     "preview": {},
-    "last_modified": "2019-06-12T01:20:02-07:00"
+    "last_modified": "2019-06-12T13:53:51-07:00"
   },
   {
     "path": "posts/final summary/",
@@ -53,5 +53,20 @@
     "categories": [],
     "preview": {},
     "last_modified": "2019-06-12T01:27:54-07:00"
+  },
+  {
+    "path": "posts/2019-06-12-functions/",
+    "title": "Creating Functions",
+    "description": "This post provides information on creating functions in R-studio.",
+    "author": [
+      {
+        "name": "Shaina Trevino, Jonathan Rochelle, Andre Klest",
+        "url": "https://educ610.com/finalprojectblog"
+      }
+    ],
+    "date": "2019-06-11",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2019-06-12T13:56:57-07:00"
   }
 ]
