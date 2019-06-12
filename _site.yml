@@ -16,7 +16,9 @@ navbar:
         - text: "Parallel Iteration map2, pmap"
           href: "parallel_iteration_map2_pmap.html"
         - text: "Functions"
-          href: "functions.html"  
+          href: "functions.html"
+        - text: "Final Summary"
+          href: "final_summary.html"  
   right:
     - text: "Home"
       href: index.html
