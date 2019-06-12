@@ -13,5 +13,20 @@
     "categories": [],
     "preview": {},
     "last_modified": "2019-06-11T21:53:13-07:00"
+  },
+  {
+    "path": "posts/",
+    "title": "Intro to purrr::map",
+    "description": "This post provides a basic over of purrr:map and how to use it.",
+    "author": [
+      {
+        "name": "Shaina Trevino, Jonathan Rochelle, Andre Klest",
+        "url": "https://educ610.com/finalprojectblog"
+      }
+    ],
+    "date": "2019-06-11",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2019-06-11T22:09:10-07:00"
   }
 ]
