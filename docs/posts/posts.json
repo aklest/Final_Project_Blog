@@ -1,5 +1,15 @@
 [
   {
+    "path": "posts/",
+    "title": "Untitled",
+    "description": {},
+    "author": [],
+    "date": "2019-06-12",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2019-06-12T00:52:17-07:00"
+  },
+  {
     "path": "posts/welcome/",
     "title": "Functional Programming in R Final Project",
     "description": "Welcome to our blog, here we will provide a walk throughs for a number of applications using R-Studio",
@@ -13,20 +23,5 @@
     "categories": [],
     "preview": {},
     "last_modified": "2019-06-11T21:53:13-07:00"
-  },
-  {
-    "path": "posts/",
-    "title": "Parallel Iteration, map2, pmap",
-    "description": "This post provides a walk through of parallel iteration usisng map2, and pmap.",
-    "author": [
-      {
-        "name": "Shaina Trevino, Jonathan Rochelle, Andre Klest",
-        "url": "https://educ610.com/finalprojectblog"
-      }
-    ],
-    "date": "2019-06-11",
-    "categories": [],
-    "preview": {},
-    "last_modified": "2019-06-12T00:20:19-07:00"
   }
 ]

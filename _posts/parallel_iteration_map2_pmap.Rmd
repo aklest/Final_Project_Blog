@@ -1,16 +1,19 @@
+
 ---
 title: "Parallel Iteration, map2, pmap"
+author:
+- affiliation: null
+  affiliation_url: https://example.com/spacelysprokets
+  name: Shaina Trevino, Jonathan Rochelle, Andre Klest
+  url: https://educ610.com/finalprojectblog
+date: "06-11-2019"
+output:
+  html_document:
+    df_print: paged
+  distill::distill_article:
+    self_contained: no
 description: |
   This post provides a walk through of parallel iteration usisng map2, and pmap.
-author:
-  - name: Shaina Trevino, Jonathan Rochelle, Andre Klest
-    url: https://educ610.com/finalprojectblog
-    affiliation: 
-    affiliation_url: https://example.com/spacelysprokets
-date: 06-11-2019
-output:
-  distill::distill_article:
-    self_contained: false
 ---
 
 #### Parallel Iteration (e.g., `map2_*`, `pmap_*`) 
