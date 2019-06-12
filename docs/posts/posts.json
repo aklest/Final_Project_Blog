@@ -16,8 +16,8 @@
   },
   {
     "path": "posts/",
-    "title": "Intro to purrr::map",
-    "description": "This post provides a basic over of purrr:map and how to use it.",
+    "title": "Using purrr::map with data frames",
+    "description": "This post provides a walk through of applying purrr:map in the context of a data frame.",
     "author": [
       {
         "name": "Shaina Trevino, Jonathan Rochelle, Andre Klest",
@@ -27,6 +27,6 @@
     "date": "2019-06-11",
     "categories": [],
     "preview": {},
-    "last_modified": "2019-06-11T22:09:10-07:00"
+    "last_modified": "2019-06-12T00:07:28-07:00"
   }
 ]
