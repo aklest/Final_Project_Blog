@@ -7,13 +7,13 @@ navbar:
   left:
     - text: "R Tutorials"
       menu:
-        - text: "welcome"
+        - text: "Functional Programming in R Final Project"
           href: "welcome.html"
-        - text: "Using_pmap_files"
+        - text: "Intro to purrr::map"
           href: "Using_pmap.html"
-        - text: "map_data_frame_files"
+        - text: "Using purrr::map with data frames"
           href: "map_data_frame.html"
-        - text: "parallel_iteration_map2_pmap"
+        - text: "Parallel Iteration, map2, pmap"
           href: "parallel_iteration_map2_pmap.html"  
   right:
     - text: "Home"
