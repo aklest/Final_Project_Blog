@@ -19,9 +19,9 @@
  <!--/radix_placeholder_import_source-->
 
   <!--radix_placeholder_meta_tags-->
-<title>My Blog: Using purrr::map with data frames</title>
+<title>My Blog: Parallel Iteration, map2, pmap</title>
 
-<meta property="description" itemprop="description" content="This post provides a walk through of applying purrr:map in the context of a data frame."/>
+<meta property="description" itemprop="description" content="This post provides a walk through of parallel iteration usisng map2, and pmap."/>
 
 
 <!--  https://schema.org/Article -->
@@ -30,27 +30,27 @@
 <meta name="article:author" content="Shaina Trevino, Jonathan Rochelle, Andre Klest"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-<meta property="og:title" content="My Blog: Using purrr::map with data frames"/>
+<meta property="og:title" content="My Blog: Parallel Iteration, map2, pmap"/>
 <meta property="og:type" content="article"/>
-<meta property="og:description" content="This post provides a walk through of applying purrr:map in the context of a data frame."/>
+<meta property="og:description" content="This post provides a walk through of parallel iteration usisng map2, and pmap."/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:site_name" content="My Blog"/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
 <meta property="twitter:card" content="summary"/>
-<meta property="twitter:title" content="My Blog: Using purrr::map with data frames"/>
-<meta property="twitter:description" content="This post provides a walk through of applying purrr:map in the context of a data frame."/>
+<meta property="twitter:title" content="My Blog: Parallel Iteration, map2, pmap"/>
+<meta property="twitter:description" content="This post provides a walk through of parallel iteration usisng map2, and pmap."/>
 
 <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Using purrr::map with data frames"]},{"type":"character","attributes":{},"value":["This post provides a walk through of applying purrr:map in the context of a data frame."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Shaina Trevino, Jonathan Rochelle, Andre Klest"]},{"type":"character","attributes":{},"value":["https://educ610.com/finalprojectblog"]},{"type":"NULL"},{"type":"character","attributes":{},"value":["https://example.com/spacelysprokets"]}]}]},{"type":"character","attributes":{},"value":["06-11-2019"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Parallel Iteration, map2, pmap"]},{"type":"character","attributes":{},"value":["This post provides a walk through of parallel iteration usisng map2, and pmap."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Shaina Trevino, Jonathan Rochelle, Andre Klest"]},{"type":"character","attributes":{},"value":["https://educ610.com/finalprojectblog"]},{"type":"NULL"},{"type":"character","attributes":{},"value":["https://example.com/spacelysprokets"]}]}]},{"type":"character","attributes":{},"value":["06-11-2019"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["Using_pmap_files/bowser-1.9.3/bowser.min.js","Using_pmap_files/distill-2.2.21/template.v2.js","Using_pmap_files/jquery-1.11.3/jquery.min.js","Using_pmap_files/webcomponents-2.0.0/webcomponents.js","Using_pmap.html","welcome/welcome_files/bowser-1.9.3/bowser.min.js","welcome/welcome_files/distill-2.2.21/template.v2.js","welcome/welcome_files/jquery-1.11.3/jquery.min.js","welcome/welcome_files/webcomponents-2.0.0/webcomponents.js","welcome/welcome.html","welcome/welcome.Rmd"]}
+  {"type":"character","attributes":{},"value":["map_data_frame_files/bowser-1.9.3/bowser.min.js","map_data_frame_files/distill-2.2.21/template.v2.js","map_data_frame_files/jquery-1.11.3/jquery.min.js","map_data_frame_files/webcomponents-2.0.0/webcomponents.js","map_data_frame.html","Using_pmap_files/bowser-1.9.3/bowser.min.js","Using_pmap_files/distill-2.2.21/template.v2.js","Using_pmap_files/jquery-1.11.3/jquery.min.js","Using_pmap_files/webcomponents-2.0.0/webcomponents.js","Using_pmap.html","welcome/welcome_files/bowser-1.9.3/bowser.min.js","welcome/welcome_files/distill-2.2.21/template.v2.js","welcome/welcome_files/jquery-1.11.3/jquery.min.js","welcome/welcome_files/webcomponents-2.0.0/webcomponents.js","welcome/welcome.html","welcome/welcome.Rmd"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 
@@ -1280,7 +1280,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Using purrr::map with data frames","description":"This post provides a walk through of applying purrr:map in the context of a data frame.","authors":[{"author":"Shaina Trevino, Jonathan Rochelle, Andre Klest","authorURL":"https://educ610.com/finalprojectblog","affiliation":"&nbsp;","affiliationURL":"https://example.com/spacelysprokets"}],"publishedDate":"2019-06-11T00:00:00.000-07:00","citationText":"Klest, 2019"}
+{"title":"Parallel Iteration, map2, pmap","description":"This post provides a walk through of parallel iteration usisng map2, and pmap.","authors":[{"author":"Shaina Trevino, Jonathan Rochelle, Andre Klest","authorURL":"https://educ610.com/finalprojectblog","affiliation":"&nbsp;","affiliationURL":"https://example.com/spacelysprokets"}],"publishedDate":"2019-06-11T00:00:00.000-07:00","citationText":"Klest, 2019"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1298,6 +1298,7 @@ R Tutorials
 <div class="nav-dropdown-content">
 <a href="../welcome.html">Functional Programming in R Final Project</a>
 <a href="../Using_pmap.html">Intro to purrr::map</a>
+<a href="../map_data_frame.html">Using purrr::map with data frames</a>
 </div>
 </div>
 </div>
@@ -1316,8 +1317,8 @@ R Tutorials
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Using purrr::map with data frames</h1>
-<p>This post provides a walk through of applying purrr:map in the context of a data frame.<br /></p>
+<h1>Parallel Iteration, map2, pmap</h1>
+<p>This post provides a walk through of parallel iteration usisng map2, and pmap.</p>
 </div>
 
 <div class="d-byline">
@@ -1327,78 +1328,84 @@ R Tutorials
 </div>
 
 <div class="d-article">
-<p>Using map() with a data frame.</p>
-<p>The following script can be used to import the data frames we will use for this example.</p>
+<h4 id="parallel-iteration-e.g.-map2_-pmap_">Parallel Iteration (e.g., <code>map2_*</code>, <code>pmap_*</code>)</h4>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-drug_by_year &lt;- import(here(&quot;data&quot;, &quot;drug_by_year.csv&quot;),
-                       setclass = &quot;tbl_df&quot;)
 
-recent_drug &lt;- import(here(&quot;data&quot;, &quot;2015_drug_dep.csv&quot;),
-                      setclass = &quot;tbl_df&quot;)</code></pre>
+</div>
+<p>The following script can be used to import the data we will use for this example.</p>
+<div class="layout-chunk" data-layout="l-body">
+
 </div>
 <ol type="1">
 <li><p><code>drug_by_year</code> includes data from 2005 to 2015 and reports on the people who responded yes to using illicit substances in the last year.</p></li>
 <li><p><code>recent_drug</code> includes has data from 2015-2016 and shows the age of first drug use, a summed depression score, whether or not participants have been to rehab, have access to mental health services, and have health insurance.</p></li>
 </ol>
-<h3 id="using-map-in-data-frames">Using <code>map()</code> in data frames</h3>
-<p>Since <code>map()</code> can take a vector for an input, and data frames are lists containing vectors, you can use <code>map</code> to iterate through data frames.</p>
-<p>For example, say we want to use the NHANES data to calculate the mean for age of first use for each drug and depression scores. Since there are quite a bit of missing values in this data set, so we will need to add arguments to the mean function to ignore the missing data.</p>
-<p>The data frame looks like this</p>
+<h4 id="parallel-iteration-e.g.-map2_-pmap_-1">Parallel Iteration (e.g., <code>map2_*</code>, <code>pmap_*</code>)</h4>
+<p>The <code>map</code> variants discussed above all take a single input to iterate (i.e., call the function on), but sometimes you need to iterate through more than just one input.</p>
+<p>This can be accomplished with <code>map2_</code> or <code>pmap_</code></p>
+<ul>
+<li><p><code>map2_</code> iterates over two inputs (e.g., two vectors)</p></li>
+<li><p><code>pmap_</code> iterates over any number of inputs</p></li>
+</ul>
+<p>For example, say you wanted to calculate a weighted mean from a vector of data values and a vector of weights.</p>
 <div class="layout-chunk" data-layout="l-body">
 
 </div>
-<p>To add arguments to a function within <code>map()</code>, we need to create an inline anonymous function where your function is first specified with <code>function(x)</code> where <code>x</code> is a place holder for what the function is going to run on. Then you write a function that you want to run on each element (<code>x</code>).</p>
-<p>Therefore, to calculate the means, our <code>map()</code> function would look like this</p>
+<p>The following example doesnt work because the weight argument is expecting a single value to apply to all observations, but we have a vector of weights.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-means &lt;- map_dbl(d, function(x) mean(x, na.rm = TRUE)) 
-means</code></pre>
-</div>
-<p>There is also a shortcut you can use within <code>map()</code> functions where you don’t have to specify <code>function(x)</code>.</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-means &lt;- map_dbl(d, ~ mean(.x, na.rm = TRUE))
-means</code></pre>
-</div>
-<p>These two examples are exactly the same, the latter just has less code. <code>function(x)</code> is implied with the <code>~</code> and then you just have to use <code>.x</code> instead of <code>x</code> for what you are iterating over.</p>
-<h4 id="map_df"><code>map_df()</code></h4>
-<p>There is another <code>map()</code> variant that is useful when working with data frames, <code>map_df()</code>.</p>
-<p>You can use <code>map_df()</code> to return a data frame as the output instead of an atomic vector.</p>
-<p>For example, say we want to return a data frame of the means and standard deviations of each column within our data frame.</p>
-<p>You would expect the below example to work, but it doesn’t because only the last line in the function is being evaluated and printed, so we only get standard deviations as the output. Also note you need to use curly braces for longer functions as seen here.</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-map_df(d, function(x) {
-  mean(x, na.rm = TRUE)
-  sd(x, na.rm = TRUE)
-}) </code></pre>
-</div>
-<p>Instead, you need to instead use <code>summarize()</code> to work within the data frame and <code>summarize()</code> each vector</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-#creating a vector for the column names to add to data frame
-column_names &lt;- colnames(d) 
 
-map_df(d, function(x) {
-  summarize(d, mean = mean(x, na.rm = TRUE),
-            sd = sd(x, na.rm = TRUE))
-}, .id = &quot;column_names&quot;)</code></pre>
 </div>
-<p>Or you could do the above in two separate steps, using <code>map()</code> to loop the functions through vectors and then put the vectors into a data frame</p>
+<p>Instead, we need a parallel iteration with <code>map2()</code> to run the function on each vector of observation with each corresponding vector of weights.</p>
+<p>Also, notice that when using <code>map2()</code> you will have an additional argument <code>.y</code>, along with <code>.x</code>, that corresponds to the second vector you are iterating through.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-#first create vectors by looping functions through data frames
-mean &lt;- map(d, ~mean(.x, na.rm = TRUE))
-sd &lt;- map(d, ~sd(.x, na.rm = TRUE))
-#then combine vectors
-cv &lt;- c(mean, sd, recursive = TRUE)
-#manually change attributes
-attr(cv, &quot;dim&quot;) &lt;- c(6, 2) #6 variables in two columns (mean and sd)
-colnames(cv) &lt;- c(&quot;mean&quot;, &quot;sd&quot;)
-#transform to data frame
-cv &lt;- data.frame(cv, row.names = column_names)
-cv</code></pre>
+
+</div>
+<p>The results is a weighted mean score for each participant.</p>
+<h4 id="pmap-briefly"><code>pmap()</code> briefly</h4>
+<p><code>pmap()</code> can be supplied any number of inputs that you provide in a single list. This list can contain any number of inputs or arguments.</p>
+<p><code>pmap()</code> is very useful when working with data frames in which there are many vectors of the same length that can be provided as inputs (i.e., columns)</p>
+<p>You can name the inputs in the list which is helpful when iterating through complex functions</p>
+<p>We will show you how to use <code>pmap</code> to iterate and build custom plots in a later blog post</p>
+<h4 id="other-purrr-functions-e.g.-walk_-reduce-modify_">Other <code>purrr</code> functions (e.g., <code>walk_*</code>, <code>reduce</code>, <code>modify_*</code>)</h4>
+<p>The <code>map()</code> variants discussed above all return an output (either an atomic vector or list). However, sometimes you don’t need to return an atomic vector or list, but iteration would still be helpful.</p>
+<p>Very useful variant of <code>map()</code> is <code>walk()</code>, specifically <code>walk2()</code> which can be used to save objects to a disk. Note: when saving something to a disk you have to provide 2 inputs: the object and the file path - this requires parallel iteration.</p>
+<p>The following code splits our longitudinal dataset by year and saves a separate .csv file for each year with the title (“year-2005”, etc.) in the data folder of the working directory</p>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<p>Other useful functions are:</p>
+<ul>
+<li><p><code>reduce()</code> takes a vector of any length as it’s input and returns a vector of length 1. For example <code>reduce(1:4, f)</code> returns <code>f(f(f(1, 2), 3), 4)</code>.</p></li>
+<li><p><code>modify()</code> returns the same type of input it is provided. For example, <code>modify(df, f)</code> will run the function on each column of the data frame and return a data frame as the output.</p></li>
+</ul>
+<h4 id="using-mutate-within-nest-is-powerful-in-list-columns">Using <code>mutate</code> within <code>nest()</code> is powerful in list columns</h4>
+<p>The data frames we have worked with so far have all contained columns of atomic vectors, however you can also have columns of lists within data frames (i.e., list column).</p>
+<p>You can use <code>group_by()</code> and <code>nest()</code> to split your data into list columns then apply <code>mutate</code> to:</p>
+<ol type="1">
+<li><p>fit models by the grouping factor and extract coefficients</p></li>
+<li><p>compare model fits</p></li>
+<li><p>extract means from models fit with two groups</p></li>
+<li><p>fit multiple different models for each grouping factor and view coefficients</p></li>
+</ol>
+<p>First, we need to transform our data a bit so that we can properly fit our models.</p>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<p>Then, we will use <code>group_by()</code> and <code>nest()</code> to split our data by each type of drug, fit a model that predicts age of first use from participant sex for each drug category, and view the coefficients.</p>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<p>Next, we can compare all model fits (note the model fits will not be good since our models were not significant).</p>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<p>Finally, we can also extract the mean age of first use for males and females for each drug</p>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<p>Another powerful use of list columns is being able to fit multiple models by each drug. Then, you could run through the same steps as above to compare model fits, etc.</p>
+<div class="layout-chunk" data-layout="l-body">
+
 </div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

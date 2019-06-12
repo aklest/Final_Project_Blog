@@ -16,8 +16,8 @@
   },
   {
     "path": "posts/",
-    "title": "Using purrr::map with data frames",
-    "description": "This post provides a walk through of applying purrr:map in the context of a data frame.",
+    "title": "Parallel Iteration, map2, pmap",
+    "description": "This post provides a walk through of parallel iteration usisng map2, and pmap.",
     "author": [
       {
         "name": "Shaina Trevino, Jonathan Rochelle, Andre Klest",
@@ -27,6 +27,6 @@
     "date": "2019-06-11",
     "categories": [],
     "preview": {},
-    "last_modified": "2019-06-12T00:07:28-07:00"
+    "last_modified": "2019-06-12T00:20:19-07:00"
   }
 ]
