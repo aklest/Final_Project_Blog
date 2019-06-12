@@ -14,7 +14,9 @@ navbar:
         - text: "Using purrr::map with data frames"
           href: "map_data_frame.html"
         - text: "Parallel Iteration map2, pmap"
-          href: "parallel_iteration_map2_pmap.html"  
+          href: "parallel_iteration_map2_pmap.html"
+        - text: "Functions"
+          href: "functions.html"  
   right:
     - text: "Home"
       href: index.html
