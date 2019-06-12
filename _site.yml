@@ -11,6 +11,8 @@ navbar:
           href: "welcome.html"
         - text: "Intro to purrr::map"
           href: "Using_pmap.html"
+        - text: "Using purrr::map with data frames"
+          href: "map_data_frame.html"
   right:
     - text: "Home"
       href: index.html
