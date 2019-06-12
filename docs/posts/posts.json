@@ -1,17 +1,17 @@
 [
   {
     "path": "posts/welcome/",
-    "title": "Welcome to My Blog",
-    "description": "Welcome to our blog, here we will provide walk throughs for a number of applications in R-Studio !",
+    "title": "Functional Programming in R Final Project",
+    "description": "Welcome to our blog, here we will provide a walk throughs for a number of applications using R-Studio",
     "author": [
       {
-        "name": "Nora Jones",
-        "url": "https://example.com/norajones"
+        "name": "Shaina Trevino, Jon Rochel, Andre Klest",
+        "url": "https://educ610.com/finalprojectblog"
       }
     ],
     "date": "2019-06-11",
     "categories": [],
     "preview": {},
-    "last_modified": "2019-06-11T18:14:18-07:00"
+    "last_modified": "2019-06-11T21:53:13-07:00"
   }
 ]
