@@ -4,9 +4,17 @@ description: |
   My Blog
 output_dir: "docs"
 navbar:
+  left:
+    - text: "R Tutorials"
+      menu:
+        - text: "Functional Programming in R Final Project"
+          href: "welcome.html"
+        - text: "Intro to purrr::map"
+          href: "Using_pmap.html"
   right:
     - text: "Home"
       href: index.html
     - text: "About"
       href: about.html
-output: distill::distill_article
+    - icon: fa fa-github
+      href: https://github.com/aklest/Final_Project_Blog.git
