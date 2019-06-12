@@ -13,6 +13,8 @@ navbar:
           href: "Using_pmap.html"
         - text: "Using purrr::map with data frames"
           href: "map_data_frame.html"
+        - text: "Parallel Iteration, map2, pmap"
+          href: "parallel_iteration_map2_pmap.html"  
   right:
     - text: "Home"
       href: index.html
